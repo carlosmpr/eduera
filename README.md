@@ -1,24 +1,19 @@
-# README
+# EduEra Api
+Restful API for Eduera online course, you can:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Create a course with a name and release date.
+- Read the data of all courses.
+- Read the details of a specific course using ID.
+- Update a specific course using an ID.
+- Delete a specific course using an ID.
 
-Things you may want to cover:
+Technologies:
 
-* Ruby version
+- Ruby on Rails.
+- Postgresql.
 
-* System dependencies
+## How to start the server:
 
-* Configuration
+1. Run:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+        rails server
