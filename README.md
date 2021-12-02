@@ -1,24 +1,73 @@
-# README
+# EduEra Api
+Restful API for Eduera online course, you can:
+> data response in JSON format
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Create a course with a name and release date.
+- Read the data of all courses.
+- Read the details of a specific course using ID.
+- Update a specific course using an ID.
+- Delete a specific course using an ID.
 
-Things you may want to cover:
+Technologies:
 
-* Ruby version
+- Ruby on Rails.
+- Postgresql.
 
-* System dependencies
 
-* Configuration
+## Live server:
+You can test the live server of EduEra api: 
+https://dashboard.heroku.com/apps/eduera/courses
 
-* Database creation
+1. Show all courses:
 
-* Database initialization
+        get request to:
+         https://dashboard.heroku.com/apps/eduera/courses
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+2. Show a specific course:
 
-* Deployment instructions
+        get request to:
+         https://dashboard.heroku.com/apps/eduera/courses/course-id
 
-* ...
+
+3. Create a new course:
+
+         post request to:
+         https://dashboard.heroku.com/apps/eduera/courses/
+
+         body:{
+                 "name":"Name of the course"
+                }
+
+4. Update the name of a specific course:
+- >note: you can only modify the name of the course
+
+        put request to:
+                 https://dashboard.heroku.com/apps/eduera/courses/course-id
+
+        body:
+         {
+                 "name":"New course Name"
+         }
+
+5. Delete a specific course:
+
+         delete request to:
+                 https://dashboard.heroku.com/apps/eduera/courses/course-id
+
+
+
+## How to start the server locally:
+> Postgresql need to be installed in your local machine to run this api
+
+1. Install dependencies:
+
+        bundle install 
+
+2. Create the database on Postgresql:
+
+        rake db:create
+
+2. Start the server:
+
+        rails s
